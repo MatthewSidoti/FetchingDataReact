@@ -1,0 +1,124 @@
+/* General resets and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Main layout */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+input[type="text"] {
+  width: 300px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1.1em;
+  background-color: #333;
+  color: #f0f0f0;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: #ff9800;
+  color: #1a1a1a;
+  font-size: 1.1em;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ff5722;
+}
+
+/* Starship list grid layout */
+section ul {
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+li {
+  background-color: #262626;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+li h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+li p {
+  margin-bottom: 6px;
+  color: #b3b3b3;
+}
+
+li strong {
+  color: #ff9800;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  main {
+    padding: 16px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+  }
+
+  section ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Loading and error messages */
+.loading,
+.error {
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 20px;
+}
+
+.loading {
+  color: #ff9800;
+}
+
+.error {
+  color: #ff5722;
+}
